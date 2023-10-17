@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import "./App.css";
+import { useState, useEffect } from "react";
+import SearchBar from "./components/searchbar/SearchBar";
+import Info from "./components/info/Info";
+import Head from "./components/head/Head";
 
 function App() {
+  const [dark, setdark] = useState<Boolean>(false);
+  const [show, setshow] = useState<Boolean>(false);
+  const name: String = "octocat";
+
+  useEffect(() => {
+    document.body.classList.toggle("dark");
+  }, [dark]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${dark ? "dark" : ""}`}>
+      <Head dark={dark} setdark={setdark} />
+
+      <SearchBar name={name} setshow={setshow} />
+
+      {show ? <Info /> : null}
     </div>
   );
 }

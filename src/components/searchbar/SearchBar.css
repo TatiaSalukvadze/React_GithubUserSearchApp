@@ -1,0 +1,90 @@
+.inpf,
+.left,
+.right {
+    display: flex;
+    align-items: center;
+}
+.inpf {
+width: 730px;
+    height: 69px;
+    border-radius: 15px;
+        background: var(--boxc);   
+        box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
+    justify-content: space-between;  
+    padding: 10px;
+    margin-top:20px;
+}
+
+.inpf img {
+    padding-left:32px;
+    padding-right:23px;
+}
+.inpf input {
+    border: 0;
+color: var(--headh1);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    background: var(--boxc);
+}
+.error{
+    color: #F74646;
+        font-size: 15px;
+        font-weight: 700;
+        padding-right:24px;
+}
+
+
+
+.inpf button {
+    width: 106px;
+        height: 50px;
+        border-radius: 10px;
+            background: #0079FF;
+   border:0;
+    color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+}
+.inpf button:hover,.inpf input:hover {
+    cursor: pointer;
+}
+@media (max-width:800px) {
+    
+        .inpf {
+            width: 573px;
+        }
+
+        .error {
+            padding-right: 14px;
+        }
+
+}
+
+@media (max-width:620px) {
+        .inpf {
+                width: 327px;
+                height: 60px;
+                padding: 7px;
+            }
+        
+            .inpf img {
+                padding-left: 10px;
+                padding-right: 9px;
+            }
+        
+            .inpf input {
+                font-size: 13px;
+            }
+            .error {
+                padding-right: 2px;
+                font-size:10px;
+            }
+                        .inpf button {
+                            width: 70px;
+                                height: 40px;
+                           
+                            font-size: 12px;
+                        }
+        
+        }

@@ -1,38 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+:root{
+  --bodyc:#F6F8FF;
+  --boxc:#FEFEFE;
+  --headh1:#222731;
+  --headspan:#697C9A;
+  --name:#2B3442;
+  --joined: #697C9A;
+  --bio:#4B6A9B;
+  --consc:#F6F8FF;
+  --whatlink:#4B6A9B;
+  --howmany:#2B3442;
+
+}
+
+.dark{
+  --bodyc:#141D2F;
+  --boxc:#1E2A47;
+  --headh1: #FFF;
+  --headspan: #FFF;
+  --name: #FFF;
+    --joined: #FFF;
+    --bio: #FFF;
+    --consc: #141D2F;
+    --whatlink: #FFF;
+    --howmany: #FFF;
+}
+body{
+  background: var(--bodyc);
+  min-height:100vh;
+}
+#root{
+  width:100%;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width:100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
